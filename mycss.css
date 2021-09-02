@@ -1,0 +1,64 @@
+html{
+  background-color: #F6F8FF;
+}
+
+.header{
+  text-align: center;
+  margin-top: 15%;
+}
+
+.slideContainer{
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin: auto;
+}
+
+.customContainer{
+  flex:1;
+  height: 200px;
+}
+
+.range {
+  height: 200px;
+  margin: auto;
+}
+
+/* Custom noUiSlider */
+.noUi-target, .noUi-base{
+  background: linear-gradient(to top, #042193, #d20016); /* Jika ingin merubah warna background dari slider, cara gampang untuk menentukan gradient nya bisa copy paste dari https://cssgradient.io/ */
+  border:none; /* menghapus border  dari slider*/
+  border-radius: 50px; /* membuat lengkungan pada ujung slider */
+}
+
+.noUi-vertical .noUi-handle{
+  cursor: grab; /* mengubah cursor menjadi icon grab ketika diarahkan pada handle */
+  width: 22px; /* mengubah lebar handle */
+  height: 14px; /* mengubah tinggi handle */
+  box-shadow: none; /* menghilangkan bayangan pada handle */
+  border: none; /* menghilangkan border pada handle */
+  border-radius: 6px 0 0 6px; /* untuk membuat bagian kiri handle agak melengkung */
+  background: #8b98a6; /* mengganti warna handle */
+  transform: translateX(-140%) translateY(65%); /* menggeser handale ke bagian kiri */
+}
+
+/* membuat segitiga disebelah kanan handle */
+.noUi-handle::after{
+  top: 50% !important; /*  */
+  width: 0 !important; /*  */
+  height: 0 !important; /* */
+  border-style: solid; /*  */
+  border-width: 7px 0 7px 10px; /*  */
+  border-color: transparent transparent transparent #8b98a6; /*  */
+  background: transparent; /*  */
+  transform: translateX(155%) translateY(-50%); /*  */
+}
+
+.noUi-tooltip{
+  background: none; /* untuk menghilangkan background pada tooltip */
+  border: none; /* untuk menghilangkan border pada tooltip */
+}
+
+.noUi-handle::before{
+  display: none;  /*  */
+}
